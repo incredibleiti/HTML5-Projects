@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Srajan Fusion Rock Band - SFRB - Welcome to our official website</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Srajan Fusion Rock Band is an Indian folk-pop duo from New Delhi, India. Consisting of Iti Tyagi and Saurav Bhatt, both play Bass and Acoustic Guitar respectively.">
+		<link rel="icon" href="http://example.com/favicon.png">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/font.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="js/examples.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#fullpage').fullpage({
+                    sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                    anchors: ['homePage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                    menu: '#menu',
+                    scrollingSpeed: 1700
+                });
+
+            });
+
+            $(document).ready(function () {
+
+                var id = '#dialog';
+
+//Get the screen height and width
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+
+//Set heigth and width to mask to fill up the whole screen
+                $('#mask').css({'width': maskWidth, 'height': maskHeight});
+
+//transition effect
+                $('#mask').fadeIn(500);
+                $('#mask').fadeTo("slow", 0.9);
+
+//Get the window height and width
+                var winH = $(window).height();
+                var winW = $(window).width();
+
+//Set the popup window to center
+                $(id).css('top', winH / 2 - $(id).height() / 2);
+                $(id).css('left', winW / 2 - $(id).width() / 2);
+
+//transition effect
+                $(id).fadeIn(2000);
+
+//if close button is clicked
+                $('.window .close').click(function (e) {
+//Cancel the link behavior
+                    e.preventDefault();
+
+                    $('#mask').hide();
+                    $('.window').hide();
+                });
+
+//if mask is clicked
+                $('#mask').click(function () {
+                    $(this).hide();
+                    $('.window').hide();
+                });
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1580025165577432";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <ul id="menu">
+            <li data-menuanchor="homePage"><a href="#homePage">About</a></li>
+            <li data-menuanchor="secondPage"><a href="#secondPage">Gallery</a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage">News and Media</a></li>
+            <li data-menuanchor="4thpage"><a href="#4thpage">Book Srajan</a></li>                  
+        </ul> 
+
+        <div id="boxes">
+            <div id="dialog" class="window">
+                <a href="#close" title="Close" class="close">X</a>
+                <h3><b>Have you visited our facebook page?</b></h3></br>
+               
+                <div class="fb-page" data-href="https://www.facebook.com/srajanrockband/" 
+                     data-tabs="timeline" data-height="70" data-width="500" data-small-header="false" 
+                     data-adapt-container-width="true" data-hide-cover="false" 
+                     data-show-facepile="true">
+                    <div class="fb-xfbml-parse-ignore">
+                        <blockquote cite="https://www.facebook.com/srajanrockband/">
+                            <a href="https://www.facebook.com/srajanrockband/">Srajan - Fusion Rock Band</a>
+                        </blockquote>
+                    </div>                    
+                </div></br></br>
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+            </div>
+            <div id="mask"></div>
+        </div>
+        <div id="fullpage">
+            <div class="section " id="section0">
+                <img src="images/SRAJAN FUSION ROCK BAND.png" alt="fullPage" />
+            </div>
+            <div class="section" id="section1">
+              <div>
+
+			<img src="images/Did you check.png" alt="fullPage"/>
+		
+		</div>
+            </div>
+            <div class="section " id="section2">
+                <img src="images/SRAJAN FUSION ROCK BAND_2.png" alt="fullPage" />
+            </div>
+            <div class="section " id="section3">
+                <img src="images/SRAJAN FUSION ROCK BAND_4.png" alt="fullPage" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!--                        <img class="img-responsive" src="images/SRAJAN FUSION ROCK BAND.png" alt="Srajan Fusion Rock Band" />-->
+                <ul>
+                    <li>
+                        <a class="index-link" href="mailto:teamsrajan@gmail.com" title="send an email">booking agent</a>
+                    </li>
+                    <li>
+                        <a class="index-link" href="https://www.facebook.com/srajanrockband" title="follow us">facebook</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>
+
